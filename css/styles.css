@@ -1,0 +1,110 @@
+/* reset */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* propiedades de la caja */
+
+.caja{
+    height: 500px;
+    display: grid;
+    /* columnas */
+grid-template-columns: repeat(2, 1fr);
+
+    /* filas */
+
+    grid-template-rows: 40% 60%;
+
+    /* gap */
+    gap: 10px 10px;
+}
+
+/* propiedades de los hijos */
+
+.hijo-1{
+    background-color: tomato;
+}
+
+.hijo-2{
+    background-color: rgb(162, 35, 12);
+}
+
+.hijo-3{
+    background-color: rgb(83, 20, 8);
+}
+.hijo-4{
+    background-color: rgb(56, 10, 2);
+}
+
+
+/* codigo ej 1 */
+
+.contenedor{
+    height: 600px;
+    background-color: tomato;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+
+    /* la justificacion */
+
+    justify-items: center ;
+    align-items: end ;
+}
+
+.item-1{
+    background-color: aqua;
+    justify-self: end ;
+    align-self: center ;
+}
+
+.item-4{
+    background-color: aqua;
+    justify-self: end ;
+    align-self: center ;
+}
+
+
+
+/* estilos ej 2 */
+.contain{
+    height: 100vh;
+    display: grid;
+    grid-template-columns: auto ;
+    grid-template-rows: 0.5fr 2fr 1fr 0.5fr;
+
+    grid-template-areas: 
+       "header header header"
+       "main main section "
+       "main main aside"
+       "footer footer footer";
+       
+       gap: 10px;
+}
+
+header{
+    background-color: aqua;
+    grid-area: header;
+}
+
+main{
+    background-color: rgb(0, 178, 178);
+    grid-area: main;
+}
+
+section{
+    background-color: rgb(0, 135, 135);
+    grid-area: section;
+}
+
+aside{
+    background-color: rgb(0, 113, 113);
+    grid-area: aside;
+}
+
+footer{
+    background-color: rgb(0, 73, 73);
+    grid-area: footer;
+}
